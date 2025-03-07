@@ -22,3 +22,4 @@ decrypted_text = des_decrypt(encrypted_text, key)
 print(f"Plaintext: {plaintext}")
 print(f"Encrypted: {encrypted_text.hex()}")
 print(f"Decrypted: {decrypted_text}")
+
