@@ -1,21 +1,16 @@
 import random
 from math import gcd
-
 def mod_inverse(e, phi):
     for d in range(2, phi):
         if (d * e) % phi == 1:
             return d
     return None
-
 def generate_keys(p, q):
     n = p * q
     phi = (p - 1) * (q - 1)
-    
     e = random.choice([i for i in range(2, phi) if gcd(i, phi) == 1])
     d = mod_inverse(e, phi)
-    
     return ((e, n), (d, n))
-
 def encrypt(message, public_key):
     e, n = public_key
     return (message ** e) % n
