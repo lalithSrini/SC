@@ -13,5 +13,5 @@ def generate_hashes(input_string):
     print("The hexadecimal equivalent of SHA1 is :")
     print(sha1_hash)
 
-
-generate_hashes("GeeksforGeeks")
+str1 = "GeekforGeeks"
+generate_hashes(str1)
